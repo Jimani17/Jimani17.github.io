@@ -1,0 +1,61 @@
+/* 
+    COLOR : 
+    sun - > #FEAD03
+    moon - > #000
+    Background - > #FFF
+*/
+
+html {
+    height: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    animation: ganti-latar 7s infinite linear;
+}
+.moon, .sun {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    text-align: center;
+    position: absolute;
+}
+.sun {
+    background: #fead03;
+}
+.moon {
+    background: #000;
+    animation: bulan-bergerak 7s infinite linear, ganti-latar 7s infinite linear;
+}
+
+
+container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+@keyframes bulan-bergerak {
+    0%{
+        left: 150px;
+    }
+    100% {
+        left: -150px;
+    }
+}
+@keyframes ganti-latar {
+    0% {
+        background: #fff;
+    }
+    50% {
+        background: #000;
+    }
+    100% {
+        background: #000;
+    }
+}
